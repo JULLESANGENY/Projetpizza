@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Catalogue – Admin La Mamma</title>
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body class="page-admin">
+
+  <header class="main-header">
+    <div class="container header-content">
+      <a href="index.html">
+        <img src="img/logo.jpeg" alt="Logo La Mamma" class="logo">
+      </a>
+      <h1>Catalogue Pizzas</h1>
+      <div class="auth-top-right">
+        <a href="index.html">Déconnexion</a>
+      </div>
+    </div>
+  </header>
+
+  <nav class="navbar">
+    <div class="container">
+      <ul>
+        <li><a href="admin.html">Tableau de bord</a></li>
+        <li><a href="admin-commandes.html">Commandes</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="container">
+    <h2>Gérer les pizzas</h2>
+
+    <form class="order-form" onsubmit="ajouterPizza(event)">
+      <label for="nom">Nom :</label>
+      <input type="text" id="nom" required>
+
+      <label for="description">Ingrédients :</label>
+      <input type="text" id="description" required>
+
+      <label for="prix">Prix (€) :</label>
+      <input type="number" id="prix" step="0.01" required>
+
+      <button type="submit" class="btn-order">Ajouter la pizza</button>
+    </form>
+
+    <section class="cart">
+      <h2>Liste des pizzas</h2>
+      <ul id="liste-pizzas"></ul>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 La Mamma – Administration</p>
+    </div>
+  </footer>
+  <script type="module">
+  import { adminPizzas } from './js/admin.js';
+  adminPizzas();
+</script>
+
+</body>
+</html>

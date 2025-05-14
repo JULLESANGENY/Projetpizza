@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Commandes – Admin La Mamma</title>
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body class="page-admin">
+
+  <header class="main-header">
+    <div class="container header-content">
+      <a href="index.html">
+        <img src="img/logo.jpeg" alt="Logo La Mamma" class="logo">
+      </a>
+      <h1>Commandes en cours</h1>
+      <div class="auth-top-right">
+        <a href="index.html">Déconnexion</a>
+      </div>
+    </div>
+  </header>
+
+  <nav class="navbar">
+    <div class="container">
+      <ul>
+        <li><a href="admin.html">Tableau de bord</a></li>
+        <li><a href="admin-pizzas.html">Catalogue Pizzas</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="container">
+    <h2>Commandes clients</h2>
+    <section id="commande-liste" class="cart">
+      <ul id="liste-commandes">
+        <!-- Commandes ajoutées dynamiquement ici -->
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 La Mamma – Administration</p>
+    </div>
+  </footer>
+
+ <script type="module">
+  import { adminCommandes } from './js/admin.js';
+  adminCommandes();
+</script>
+
+</body>
+</html>

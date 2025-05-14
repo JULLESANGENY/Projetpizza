@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin – La Mamma</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/admin.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body class="page-admin">
+
+  <header class="main-header">
+    <div class="container header-content">
+      <a href="index.html">
+        <img src="img/logo.jpeg" alt="Logo La Mamma" class="logo">
+      </a>
+      <h1>Espace Admin</h1>
+      <div class="auth-top-right">
+        <a href="index.html">Déconnexion</a>
+      </div>
+    </div>
+  </header>
+
+  <nav class="navbar">
+    <div class="container">
+      <ul>
+        <li><a href="admin-commandes.html">Commandes</a></li>
+        <li><a href="admin-pizzas.html">Catalogue Pizzas</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="container">
+    <h2>Tableau de bord administrateur</h2>
+    <div class="pizza-grid">
+      <div class="pizza-card">
+        <h3>Commandes clients</h3>
+        <p>Visualisez les commandes en attente et marquez-les comme prêtes.</p>
+        <a href="admin-commandes.html" class="btn-order">Gérer les commandes</a>
+      </div>
+
+      <div class="pizza-card">
+        <h3>Catalogue des pizzas</h3>
+        <p>Ajoutez, modifiez ou supprimez des pizzas du menu.</p>
+        <a href="admin-pizzas.html" class="btn-order">Gérer le catalogue</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 La Mamma – Espace administrateur</p>
+    </div>
+  </footer>
+</body>
+</html>

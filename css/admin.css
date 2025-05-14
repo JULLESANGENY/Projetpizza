@@ -1,0 +1,143 @@
+/* === Style CSS pour l'espace Admin – La Mamma === */
+
+body.page-admin {
+  background-color: #fffdf7;
+  font-family: 'Roboto', sans-serif;
+  color: #212121;
+}
+
+.main-header {
+  background-color: #880e4f;
+  color: white;
+  padding: 16px 0;
+  text-align: center;
+  animation: slideDown 0.7s ease-out;
+}
+
+.navbar {
+  background-color: #ad1457;
+  padding: 10px 0;
+}
+
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  transition: color 0.2s ease-in-out;
+}
+
+.navbar a:hover {
+  color: #fce4ec;
+}
+
+h2 {
+  color: #ad1457;
+  text-align: center;
+  margin-top: 24px;
+}
+
+.btn-order,
+.validate-btn {
+  background-color: #d81b60;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s ease;
+}
+
+.btn-order:hover,
+.validate-btn:hover {
+  background-color: #880e4f;
+}
+
+.remove-btn {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-left: 10px;
+  font-size: 12px;
+}
+
+.remove-btn:hover {
+  background-color: #c62828;
+}
+
+.cart ul,
+#liste-pizzas {
+  list-style: none;
+  padding-left: 0;
+}
+
+.cart li,
+#liste-pizzas li {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 12px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.order-form {
+  max-width: 500px;
+  margin: 30px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+footer {
+  background-color: #880e4f;
+  color: white;
+  text-align: center;
+  padding: 12px 0;
+  margin-top: 40px;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-50%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar ul {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .order-form,
+  .cart,
+  #liste-pizzas {
+    padding: 12px;
+  }
+
+  .btn-order,
+  .validate-btn,
+  .remove-btn {
+    width: 100%;
+    margin-top: 8px;
+  }
+}
