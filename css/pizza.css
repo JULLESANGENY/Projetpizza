@@ -1,0 +1,97 @@
+/* Style dédié à la page pizza.html */
+
+.pizza-detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  animation: fadeInUp 1s ease;
+  padding: 32px 0;
+}
+
+.pizza-detail img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  animation: zoomIn 1s ease-in-out;
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.pizza-detail h2 {
+  font-size: 32px;
+  color: #D32F2F;
+  text-align: center;
+}
+
+.pizza-detail p {
+  font-size: 18px;
+  max-width: 600px;
+  text-align: center;
+  color: #333;
+}
+
+.pizza-detail .price {
+  font-size: 22px;
+  color: #388E3C;
+  font-weight: bold;
+}
+
+.btn-order {
+  background-color: #D32F2F;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.2s;
+  text-decoration: none;
+}
+
+.btn-order:hover {
+  background-color: #B71C1C;
+  transform: scale(1.05);
+}
+
+.btn-back {
+  margin-top: 30px;
+  text-align: center;
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .pizza-detail img {
+    max-width: 90%;
+  }
+
+  .pizza-detail h2 {
+    font-size: 24px;
+  }
+
+  .pizza-detail p {
+    font-size: 16px;
+  }
+
+  .pizza-detail .price {
+    font-size: 20px;
+  }
+
+  .btn-order {
+    width: 90%;
+  }
+}

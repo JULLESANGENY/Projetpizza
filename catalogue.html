@@ -31,20 +31,22 @@
 
   <main class="main-wrapper">
     <div class="container">
-          <section class="pizza-grid">
-        <div class="pizza-card">
+      <section class="pizza-grid">
+        <div class="pizza-card" onclick="goToPizza('reine.png', 'Pizza Reine', 'Tomate, mozzarella, jambon, champignons', 12.90)">
           <img src="img/reine.png" alt="Pizza Reine" class="pizza-img">
           <h3>Pizza Reine</h3>
           <p>Tomate, mozzarella, jambon, champignons</p>
           <span class="price">12.90€</span>
         </div>
-        <div class="pizza-card">
+
+        <div class="pizza-card" onclick="goToPizza('margherita.jpg', 'Pizza Margherita', 'Tomate, mozzarella, basilic', 10.50)">
           <img src="img/margherita.jpg" alt="Pizza Margherita" class="pizza-img">
           <h3>Pizza Margherita</h3>
           <p>Tomate, mozzarella, basilic</p>
           <span class="price">10.50€</span>
         </div>
-        <div class="pizza-card">
+
+        <div class="pizza-card" onclick="goToPizza('4fromages.jpg', 'Pizza 4 Fromages', 'Tomate, mozzarella, bleu, chèvre, emmental', 13.90)">
           <img src="img/4fromages.jpg" alt="Pizza 4 Fromages" class="pizza-img">
           <h3>Pizza 4 Fromages</h3>
           <p>Tomate, mozzarella, bleu, chèvre, emmental</p>
@@ -59,5 +61,13 @@
       <p>&copy; 2025 La Mamma. Tous droits réservés.</p>
     </div>
   </footer>
+
+  <script>
+    function goToPizza(image, nom, description, prix) {
+      const pizza = { image, nom, description, prix };
+      sessionStorage.setItem("pizza", JSON.stringify(pizza));
+      window.location.href = "pizza.html";
+    }
+  </script>
 </body>
 </html>
